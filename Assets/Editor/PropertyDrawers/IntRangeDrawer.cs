@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace UniExtension
@@ -9,28 +10,35 @@ namespace UniExtension
     {
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
         {
-            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/Styles/RootStyle.uss");
             var root = new VisualElement();
-            root.styleSheets.Add(styleSheet);
-            root.AddToClassList("align-horizontal");
-            root.AddToClassList("flex-grow");
+            root.style.flexDirection = FlexDirection.Row;
+            root.style.flexShrink = 0;
+            root.style.marginLeft = 3;
 
             var label = new Label(property.displayName);
-            label.style.marginLeft = 4;
-            label.AddToClassList("flex-grow");
+            label.style.flexShrink = 0;
+            label.style.unityTextAlign = TextAnchor.MiddleLeft;
+            label.style.minWidth = 120;
             root.Add(label);
 
             var fieldsContainer = new VisualElement();
-            fieldsContainer.AddToClassList("align-horizontal");
+            fieldsContainer.style.flexDirection = FlexDirection.Row;
+            fieldsContainer.style.flexGrow = 1;
+            fieldsContainer.style.flexShrink = 0;
+            fieldsContainer.style.justifyContent = Justify.FlexEnd;
             root.Add(fieldsContainer);
 
             var minProperty = property.FindPropertyRelative("_min");
             var maxProperty = property.FindPropertyRelative("_max");
 
             var minField = new IntegerField("min");
+            minField.labelElement.style.flexBasis = 30;
+            minField.labelElement.style.minWidth = 30;
             minField.BindProperty(minProperty);
 
             var maxField = new IntegerField("max");
+            maxField.labelElement.style.flexBasis = 30;
+            maxField.labelElement.style.minWidth = 30;
             maxField.BindProperty(maxProperty);
 
             minField.RegisterValueChangedCallback(evt =>

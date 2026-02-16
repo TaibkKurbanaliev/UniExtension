@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomExtensions.TestProperties
   _myRange:
-    _min: -97
-    _max: -97
+    _min: 2147416789
+    _max: 2147483647
   _vec: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
