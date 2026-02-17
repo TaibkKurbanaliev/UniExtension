@@ -1,0 +1,18 @@
+{
+    "name": "UniExtension.Editor",
+    "rootNamespace": "UniExtension",
+    "references": [
+        "GUID:ceffeac5fd9e10847a302e5a0d42d782"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

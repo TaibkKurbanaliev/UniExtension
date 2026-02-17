@@ -1,0 +1,16 @@
+{
+    "name": "UniExtension.Tests",
+    "rootNamespace": "UniExtension",
+    "references": [
+        "GUID:ceffeac5fd9e10847a302e5a0d42d782"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
