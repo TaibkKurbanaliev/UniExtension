@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace UniExtension
 {
+#if UNITY_EDITOR
     [InitializeOnLoad]
     public class AnimatorParametersGenerator : AssetModificationProcessor
     {
@@ -107,4 +108,5 @@ namespace UniExtension
             return sb.ToString();
         }
     }
+#endif
 }

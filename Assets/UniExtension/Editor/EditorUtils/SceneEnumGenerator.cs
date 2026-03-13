@@ -12,6 +12,7 @@ namespace UniExtension
     /// <summary>
     /// Generate Enum which contains all scenes in scene list
     /// </summary>
+#if UNITY_EDITOR
     [InitializeOnLoad]
     public class SceneEnumGenerator
     {
@@ -80,4 +81,6 @@ namespace UniExtension
             return clean;
         }
     }
+#endif
+
 }
