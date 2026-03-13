@@ -20,8 +20,6 @@ namespace UniExtension
 
         static SceneEnumGenerator()
         {
-            Debug.Log("Kek");
-
             var names = new List<string>();
 
             for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
