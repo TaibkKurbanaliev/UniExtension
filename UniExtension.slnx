@@ -1,0 +1,6 @@
+﻿<Solution>
+  <Project Path="UniExtension.csproj" />
+  <Project Path="UniExtension.Editor.csproj" />
+  <Project Path="UniExtension.Tests.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+</Solution>
